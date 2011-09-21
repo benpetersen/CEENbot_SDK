@@ -66,8 +66,8 @@ PD6		Green LED 1=on, 0=off
 */
 
 // ============================== includes ================================ //
-#include "324V221HW.h"          // this include defines all of the prototypes
-#include "oliverHeader.h"	      //   required for the this file
+#include "324V221HW.h"						// this include defines all of the prototypes
+											//   required for the this file
 
 
 /******************************************************************************
@@ -107,33 +107,6 @@ int main (void)
 
 
 	//--------Motion Operations should be here-------------------------------------------------------
-const int SPEED = 75;
-
-
-ucMotor_L_Speed = SPEED;
-ucMotor_R_Speed = SPEED;      //Move forward (downward) [left vertical strip of "U"]
-_delay_ms(5000);
-
-TurnLeft(SPEED);
-ucMotor_L_Speed = SPEED;
-ucMotor_R_Speed = SPEED;
-
-ucMotor_L_Speed = SPEED;
-ucMotor_R_Speed = SPEED;      //Move forward (upward) [right vertical strip of "U"]
-_delay_ms(5000);
-
-backTheHellUp(SPEED);
-_delay_ms(5000);
-
-turn90(R, 90);
-ucMotor_L_Speed = SPEED;
-ucMotor_R_Speed = SPEED; 
-
-
-//After finishing the U, play song
-playRingTheBell();  //Play "Ring the Bell"
-
-
 
 
 }
@@ -629,7 +602,7 @@ static int LCD_putchar(char c, FILE *stream)
 *                                                                             *
 *  HWOutput: (SPI) SPDR, SPCR, SPSR, MISO, MOSI, SCK, SS                      *
 *                                                                             *
-*  Globals Read:  PR fOGMEM Char_Table  -- corresponds to the font chosen       *
+*  Globals Read:  PROGMEM Char_Table  -- corresponds to the font chosen       *
 *                                       by the user                           *
 *                                                                             *
 *  Globals Write: (None)                                                      *
